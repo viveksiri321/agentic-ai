@@ -5,10 +5,12 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0',
-    allowedHosts: 'all' 
+    port: 5173,
+    allowedHosts: ["agentic-ai-7.onrender.com"] 
   },
   preview: {
     host: '0.0.0.0',
-    allowedHosts: 'all'
+    port: process.env.PORT || 5173,
+    allowedHosts: ["agentic-ai-7.onrender.com"]
   }
 })
